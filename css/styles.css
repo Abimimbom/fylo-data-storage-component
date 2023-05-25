@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --col-gradient: -webkit-linear-gradient(
+    -45deg,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  --col-pale-blue: hsl(243, 100%, 93%);
+  --col-grayish-blue: hsl(229, 7%, 55%);
+  --col-dark-blue: hsl(228, 56%, 26%);
+  --col-darker-blue: hsl(229, 57%, 11%);
+
+  --ff-raleway: "Raleway", sans-serif;
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  background-color: var(--col-darker-blue);
+  color: var(--col-pale-blue);
+  font-family: var(--ff-raleway);
+  background-image: url(/images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.rhs-container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--col-dark-blue);
+  padding: 3rem 3rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-right: 6rem;
+  /* width: 300px; */
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons img {
+    background-color: var(--col-darker-blue);
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+}
+
+.lhs-container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    background-color: var(--col-dark-blue);
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.data-noti {
+    position: absolute;
+    left: 17.5rem;
+    top: -2rem;
+    background-color: #fff;
+    color: var(--col-darker-blue);
+    padding: .8rem 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.data-noti::after {
+    content: "";
+    border: 16px solid #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    left: 7.35rem
+}
+
+.data-noti p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    color: var(--col-grayish-blue);
+    font-size: 12px;
+}
+
+.data-noti span {
+    font-size: 2rem;
+    color: var(--col-darker-blue);
+}
+
+.lhs-container > * {
+    margin-bottom: 0.8rem;
+}
+
+.lhs-container p > span {
+    font-weight: var(--fw-bold);
+}
+
+.progress-val {
+  display: flex;
+  justify-content: space-between;
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 400px;
+  height: 12px;
+  background-image: var(--col-gradient);
+  border-radius: 50px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--col-darker-blue);
+  border-radius: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: var(--col-gradient);
+  border-radius: 50px;
+}
