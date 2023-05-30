@@ -34,7 +34,7 @@
   background-color: var(--col-darker-blue);
   color: var(--col-pale-blue);
   font-family: var(--ff-raleway);
-  background-image: url(/images/bg-desktop.png);
+  background-image: url("../images/bg-desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
